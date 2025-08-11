@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: 800;
+}
+
+/* Hero Section */
+.hero {
+    height: 40vh; /* smaller hero for quicker scroll hint */
+    background: linear-gradient(to bottom right, #ffffff, #e6f0ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 0px 20px; /* top 40px, right 20px, bottom 20px, left 20px */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.scroll-down {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+    color: #007bff;
+}
+
+/* Sections */
+.about, .contact {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about h2 {
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+/* Contact Info - UPDATED */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;              /* increased gap */
+    align-items: flex-start;
+    margin-top: 15px;
+    max-width: 400px;       /* limit width */
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    color: #1a1a1a;       /* text is black/dark */
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.06); /* scale up text + icon */
+}
+
+/* Icon styles for Contact */
+.icon {
+    width: 28px;            /* bigger icon */
+    height: 28px;
+    flex-shrink: 0;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Specific icon color overrides */
+.email-icon {
+    color: #1a1a1a;         /* email icon black */
+}
+
+.whatsapp-icon {
+    color: #1a1a1a;         /* WhatsApp official green */
+}
+
+/* Icon scale on hover */
+.contact-item:hover .icon {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 480px) {
+    .contact-info {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* Reduce vertical space between About and Contact */
+.about {
+  padding-bottom: 30px;  /* was 60px */
+}
+
+.contact {
+  padding-top: 30px;     /* was 60px */
+  padding-bottom: 60px;  /* keep bottom padding */
+}
